@@ -1,0 +1,65 @@
+﻿@model WorkFlowApplication.Models.WorkFlow
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>WorkFlow</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Work_FlowName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Work_FlowName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Work_Flow_Primary_Owner)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Work_Flow_Primary_Owner)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Work_Flow_Entry_Criteria)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Work_Flow_Entry_Criteria)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Total_Entities)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Total_Entities)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Work_Flow_Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Work_Flow_Status)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

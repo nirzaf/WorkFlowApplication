@@ -1,0 +1,76 @@
+﻿@model IEnumerable<WorkFlowApplication.Models.EntityModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.EntityOwner)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EntityCriteria)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ActionRequired)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExitCriteria)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EntityCreatedDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EntityCloseDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EntityAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EntityApproved)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.EntityOwner)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EntityCriteria)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ActionRequired)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExitCriteria)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EntityCreatedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EntityCloseDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EntityAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EntityApproved)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.EntityID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.EntityID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.EntityID })
+        </td>
+    </tr>
+}
+
+</table>

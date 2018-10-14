@@ -1,0 +1,58 @@
+﻿@model IEnumerable<WorkFlowApplication.Models.WorkFlow>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Work_FlowName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Work_Flow_Primary_Owner)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Work_Flow_Entry_Criteria)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Total_Entities)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Work_Flow_Status)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Work_FlowName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Work_Flow_Primary_Owner)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Work_Flow_Entry_Criteria)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Total_Entities)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Work_Flow_Status)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Work_Flow_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Work_Flow_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Work_Flow_ID })
+        </td>
+    </tr>
+}
+
+</table>

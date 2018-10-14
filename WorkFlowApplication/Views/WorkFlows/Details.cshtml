@@ -1,0 +1,59 @@
+﻿@model WorkFlowApplication.Models.WorkFlow
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>WorkFlow</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Work_FlowName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Work_FlowName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Work_Flow_Primary_Owner)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Work_Flow_Primary_Owner)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Work_Flow_Entry_Criteria)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Work_Flow_Entry_Criteria)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Total_Entities)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Total_Entities)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Work_Flow_Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Work_Flow_Status)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Work_Flow_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,83 @@
+﻿@model WorkFlowApplication.Models.EntityModel
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>EntityModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EntityOwner)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EntityOwner)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EntityCriteria)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EntityCriteria)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ActionRequired)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ActionRequired)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExitCriteria)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExitCriteria)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EntityCreatedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EntityCreatedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EntityCloseDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EntityCloseDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EntityAge)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EntityAge)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EntityApproved)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EntityApproved)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EntityID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
